@@ -2,25 +2,25 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SelectionSortTest {
+class SortTest {
 
     @Test
-    void testSort() {
+    void testSelectionSort() {
         int[] testArray = createArray();
         int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
-        SelectionSort ss = new SelectionSort();
-        ss.sort(testArray);
-        String testArrayString = ss.arrayToString(testArray);
-        String sortedArrayString = ss.arrayToString(sortedArray);
+        Sort sort = new Sort();
+        sort.selectionSort(testArray);
+        String testArrayString = sort.arrayToString(testArray);
+        String sortedArrayString = sort.arrayToString(sortedArray);
         assertEquals(sortedArrayString, testArrayString);
     }
 
     @Test
     void testToString_emptyArray() {
         int[] testArray = {};
-        SelectionSort ss = new SelectionSort();
+        Sort sort = new Sort();
         String expected = "[]";
-        String actual = ss.arrayToString(testArray);
+        String actual = sort.arrayToString(testArray);
         assertEquals(actual, expected);
     }
 

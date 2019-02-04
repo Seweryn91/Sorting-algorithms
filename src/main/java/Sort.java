@@ -1,6 +1,20 @@
-public class SelectionSort {
+public class Sort {
 
-    public void sort(int[] array) {
+    void bubbleSort(int arr[])
+    {
+        int len = arr.length;
+        for (int i = 0; i < len-1; i++)
+            for (int j = 0; j < len - i -1; j++)
+                if (arr[j] > arr[j+1])
+                {
+                    // swap arr[j+1] and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+    }
+
+    public void selectionSort(int[] array) {
         int len = array.length;
 
         for (int i = 0; i < len-1; i++) {
