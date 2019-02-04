@@ -30,5 +30,5 @@ public class SelectionSort {
         sb.append(']');
         return sb.toString();
     }
-    
+
 }
