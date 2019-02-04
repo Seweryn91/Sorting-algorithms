@@ -1,16 +1,30 @@
 public class Sort {
 
-    void bubbleSort(int arr[])
-    {
-        int len = arr.length;
+    void insertionSort(int[] array) {
+        int len = array.length;
+
+        for (int i=1; i<len; ++i) {
+            int key = array[i]; //set initial value of key to array[1]
+            int j = i-1;
+
+            while (j >= 0 && array[j] > key) { // move elements from beginning to len-1, that are > key to one pos ahead
+                array[j+1] = array[j];
+                j = j-1;
+            }
+            array[j+1] = key;
+        }
+    }
+
+
+    void bubbleSort(int[] array) {
+        int len = array.length;
+
         for (int i = 0; i < len-1; i++)
             for (int j = 0; j < len - i -1; j++)
-                if (arr[j] > arr[j+1])
-                {
-                    // swap arr[j+1] and arr[i]
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                if (array[j] > array[j+1]) { // swap arr[j+1] and arr[i]
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
                 }
     }
 
