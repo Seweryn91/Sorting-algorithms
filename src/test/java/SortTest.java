@@ -27,6 +27,17 @@ class SortTest {
     }
 
     @Test
+    void testInsertionSort() {
+        int[] testArray = createArray();
+        int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
+        Sort sort = new Sort();
+        sort.insertionSort(testArray);
+        String testArrayString = sort.arrayToString(testArray);
+        String sortedArrayString = sort.arrayToString(sortedArray);
+        assertEquals(sortedArrayString, testArrayString);
+    }
+
+    @Test
     void testToString_emptyArray() {
         int[] testArray = {};
         Sort sort = new Sort();
