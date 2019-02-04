@@ -16,6 +16,17 @@ class SortTest {
     }
 
     @Test
+    void testBubbleSort() {
+        int[] testArray = createArray();
+        int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
+        Sort sort = new Sort();
+        sort.bubbleSort(testArray);
+        String testArrayString = sort.arrayToString(testArray);
+        String sortedArrayString = sort.arrayToString(sortedArray);
+        assertEquals(sortedArrayString, testArrayString);
+    }
+
+    @Test
     void testToString_emptyArray() {
         int[] testArray = {};
         Sort sort = new Sort();
