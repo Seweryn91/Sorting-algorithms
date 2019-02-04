@@ -15,6 +15,15 @@ class SelectionSortTest {
         assertEquals(sortedArrayString, testArrayString);
     }
 
+    @Test
+    void testToString_emptyArray() {
+        int[] testArray = {};
+        SelectionSort ss = new SelectionSort();
+        String expected = "[]";
+        String actual = ss.arrayToString(testArray);
+        assertEquals(actual, expected);
+    }
+
     int[] createArray() {
         int[] array = {8,7,5,3,6,1,2,0,4,9};
         return array;
