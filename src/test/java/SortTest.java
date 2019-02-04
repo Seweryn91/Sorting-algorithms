@@ -46,7 +46,7 @@ class SortTest {
         assertEquals(actual, expected);
     }
 
-    int[] createArray() {
+    private int[] createArray() {
         int[] array = {8,7,5,3,6,1,2,0,4,9};
         return array;
     }
