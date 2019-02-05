@@ -1,5 +1,5 @@
 public class SimpleSorts {
-/**Class includes some simple sorting algorithms with time complexity of O(N^2) */
+/**Class includes some simple sorting algorithms with average time complexity of O(N^2) */
 
     void insertionSort(int[] array) {
         int len = array.length;
