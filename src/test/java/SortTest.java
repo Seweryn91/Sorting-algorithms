@@ -8,7 +8,7 @@ class SortTest {
     void testSelectionSort() {
         int[] testArray = createArray();
         int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
-        Sort sort = new Sort();
+        SimpleSorts sort = new SimpleSorts();
         sort.selectionSort(testArray);
         String testArrayString = sort.arrayToString(testArray);
         String sortedArrayString = sort.arrayToString(sortedArray);
@@ -19,7 +19,7 @@ class SortTest {
     void testBubbleSort() {
         int[] testArray = createArray();
         int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
-        Sort sort = new Sort();
+        SimpleSorts sort = new SimpleSorts();
         sort.bubbleSort(testArray);
         String testArrayString = sort.arrayToString(testArray);
         String sortedArrayString = sort.arrayToString(sortedArray);
@@ -30,7 +30,7 @@ class SortTest {
     void testInsertionSort() {
         int[] testArray = createArray();
         int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
-        Sort sort = new Sort();
+        SimpleSorts sort = new SimpleSorts();
         sort.insertionSort(testArray);
         String testArrayString = sort.arrayToString(testArray);
         String sortedArrayString = sort.arrayToString(sortedArray);
@@ -40,7 +40,7 @@ class SortTest {
     @Test
     void testToString_emptyArray() {
         int[] testArray = {};
-        Sort sort = new Sort();
+        SimpleSorts sort = new SimpleSorts();
         String expected = "[]";
         String actual = sort.arrayToString(testArray);
         assertEquals(actual, expected);

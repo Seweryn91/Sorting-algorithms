@@ -1,9 +1,10 @@
-public class Sort {
+public class SimpleSorts {
+/**Class includes some simple sorting algorithms with time complexity of O(N^2) */
 
     void insertionSort(int[] array) {
         int len = array.length;
 
-        for (int i=1; i<len; ++i) {
+        for (int i=1; i < len; ++i) {
             int key = array[i]; //set initial value of key to array[1]
             int j = i-1;
 
