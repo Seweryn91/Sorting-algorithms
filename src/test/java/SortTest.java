@@ -47,8 +47,7 @@ class SortTest {
     }
 
     private int[] createArray() {
-        int[] array = {8,7,5,3,6,1,2,0,4,9};
-        return array;
+        return new int[]{8,7,5,3,6,1,2,0,4,9};
     }
 
 }
