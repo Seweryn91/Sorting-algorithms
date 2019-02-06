@@ -4,14 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SortTest {
 
+    PrintUtils printUtils = new PrintUtils();
+
     @Test
     void testSelectionSort() {
         int[] testArray = createArray();
         int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
         SimpleSorts sort = new SimpleSorts();
         sort.selectionSort(testArray);
-        String testArrayString = sort.arrayToString(testArray);
-        String sortedArrayString = sort.arrayToString(sortedArray);
+        String testArrayString = printUtils.arrayToString(testArray);
+        String sortedArrayString = printUtils.arrayToString(sortedArray);
         assertEquals(sortedArrayString, testArrayString);
     }
 
@@ -21,8 +23,8 @@ class SortTest {
         int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
         SimpleSorts sort = new SimpleSorts();
         sort.bubbleSort(testArray);
-        String testArrayString = sort.arrayToString(testArray);
-        String sortedArrayString = sort.arrayToString(sortedArray);
+        String testArrayString = printUtils.arrayToString(testArray);
+        String sortedArrayString = printUtils.arrayToString(sortedArray);
         assertEquals(sortedArrayString, testArrayString);
     }
 
@@ -32,8 +34,8 @@ class SortTest {
         int[] sortedArray = {0,1,2,3,4,5,6,7,8,9};
         SimpleSorts sort = new SimpleSorts();
         sort.insertionSort(testArray);
-        String testArrayString = sort.arrayToString(testArray);
-        String sortedArrayString = sort.arrayToString(sortedArray);
+        String testArrayString = printUtils.arrayToString(testArray);
+        String sortedArrayString = printUtils.arrayToString(sortedArray);
         assertEquals(sortedArrayString, testArrayString);
     }
 
@@ -42,7 +44,7 @@ class SortTest {
         int[] testArray = {};
         SimpleSorts sort = new SimpleSorts();
         String expected = "[]";
-        String actual = sort.arrayToString(testArray);
+        String actual = printUtils.arrayToString(testArray);
         assertEquals(actual, expected);
     }
 
