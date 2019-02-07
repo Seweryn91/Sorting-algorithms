@@ -5,9 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EfficientSortsTest {
 
-    PrintUtils printUtils = new PrintUtils();
-    MergeSort mergeSort = new MergeSort();
-    QuickSort quickSort = new QuickSort();
+    private PrintUtils printUtils = new PrintUtils();
+    private MergeSort mergeSort = new MergeSort();
+    private QuickSort quickSort = new QuickSort();
 
 
     @Test
